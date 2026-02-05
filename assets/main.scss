@@ -687,6 +687,15 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    max-width: calc(100% - 80px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .brand span {
+    font-size: 0.95rem;
+    line-height: 1.1;
+    white-space: nowrap;
   }
 
   .menu-icon {
@@ -701,7 +710,7 @@ h3 {
   }
 
   .nav-list--desktop {
-    display: none;
+    display: none !important;
   }
 
   .nav-list--mobile {
@@ -721,7 +730,7 @@ h3 {
   }
 
   .nav-trigger:checked ~ .nav-list--mobile {
-    display: flex;
+    display: flex !important;
   }
 
   .hero {
