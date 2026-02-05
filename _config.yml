@@ -1,0 +1,10 @@
+title: Marcel Gast
+description: Metal musician, software builder, and web creator
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Keep generated files out of source control.
+exclude:
+  - README.md

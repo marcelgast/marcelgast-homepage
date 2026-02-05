@@ -16,3 +16,14 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# Editor folders
+.vscode/
+
+# OS files/folders
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100/
+.Trashes/
+$RECYCLE.BIN/
