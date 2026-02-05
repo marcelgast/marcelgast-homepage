@@ -169,7 +169,7 @@ h3 {
   inset: -2px;
   background: linear-gradient(170deg, var(--hero-overlay), rgba(0, 0, 0, 0.82)),
     url("/assets/images/misc/hero.jpeg") center/cover no-repeat fixed;
-  filter: grayscale(var(--hero-grayscale));
+  filter: grayscale(1);
   z-index: 0;
 }
 
