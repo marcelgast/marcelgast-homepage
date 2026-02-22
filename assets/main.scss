@@ -634,6 +634,18 @@ h3 {
   margin: 1rem 0;
 }
 
+#privacy-policy hr {
+  border: 0;
+  border-top: 1px solid var(--line-accent);
+  margin: 1rem 0;
+}
+
+#terms-and-conditions hr {
+  border: 0;
+  border-top: 1px solid var(--line-accent);
+  margin: 1rem 0;
+}
+
 .site-modal__close {
   position: absolute;
   top: 0.45rem;
