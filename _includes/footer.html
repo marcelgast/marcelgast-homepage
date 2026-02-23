@@ -756,5 +756,87 @@
       if (e.key !== "Escape") return;
       document.querySelectorAll(".site-modal.is-open").forEach(function (m) { closeModal(m); });
     });
+
+    var navTrigger = document.getElementById("nav-trigger");
+    if (navTrigger) {
+      document.querySelectorAll(".nav-list--mobile .page-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navTrigger.checked = false;
+        });
+      });
+    }
+
+    var currentProjectsSection = document.getElementById("current-projects");
+    if (!currentProjectsSection) return;
+
+    var pending = false;
+    var nextX = 50;
+    var nextY = 50;
+
+    function flushPointer() {
+      pending = false;
+      currentProjectsSection.style.setProperty("--mouse-x", nextX + "%");
+      currentProjectsSection.style.setProperty("--mouse-y", nextY + "%");
+    }
+
+    currentProjectsSection.addEventListener("pointermove", function (e) {
+      var rect = currentProjectsSection.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      nextX = ((e.clientX - rect.left) / rect.width) * 100;
+      nextY = ((e.clientY - rect.top) / rect.height) * 100;
+      if (!pending) {
+        pending = true;
+        window.requestAnimationFrame(flushPointer);
+      }
+    });
+
+    currentProjectsSection.addEventListener("pointerenter", function () {
+      currentProjectsSection.style.setProperty("--mouse-glow-opacity", "1");
+    });
+
+    currentProjectsSection.addEventListener("pointerleave", function () {
+      currentProjectsSection.style.setProperty("--mouse-glow-opacity", "0");
+    });
+
+    function targetIdFromLogoSrc(src) {
+      if (!src) return null;
+      if (src.indexOf("mgStudios") !== -1) return "about";
+      if (src.indexOf("practiceTab") !== -1) return "software";
+      if (src.indexOf("tempoDeck") !== -1) return "tempodeck";
+      if (src.indexOf("xerador") !== -1) return "music";
+      if (src.indexOf("katalyst") !== -1) return "music";
+      if (src.indexOf("frostFireWings") !== -1) return "music";
+      return null;
+    }
+
+    currentProjectsSection.querySelectorAll(".integration-chip").forEach(function (chip) {
+      chip.setAttribute("role", "button");
+      chip.setAttribute("tabindex", "0");
+    });
+
+    function goToChipTarget(chip) {
+      if (!chip) return;
+      var img = chip.querySelector("img");
+      if (!img) return;
+      var targetId = targetIdFromLogoSrc(img.getAttribute("src") || "");
+      if (!targetId) return;
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    currentProjectsSection.addEventListener("click", function (e) {
+      var chip = e.target.closest(".integration-chip");
+      if (!chip || !currentProjectsSection.contains(chip)) return;
+      goToChipTarget(chip);
+    });
+
+    currentProjectsSection.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var chip = e.target.closest(".integration-chip");
+      if (!chip || !currentProjectsSection.contains(chip)) return;
+      e.preventDefault();
+      goToChipTarget(chip);
+    });
   })();
 </script>
