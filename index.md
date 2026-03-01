@@ -194,7 +194,9 @@ title: Marcel Gast
   <div class="section-inner">
     <article class="practice-showcase">
       <div class="practice-lines" aria-hidden="true"></div>
-      <img class="practice-logo" src="/assets/images/current-projects/practicetab-logo-wide.png" alt="PracticeTab logo">
+      <a class="practice-logo-link" href="https://getpracticetab.com" target="_blank" rel="noopener noreferrer" aria-label="Open PracticeTab website">
+        <img class="practice-logo" src="/assets/images/current-projects/practicetab-logo-wide.png" alt="PracticeTab logo">
+      </a>
       <h2 class="section-title">Focus-first automation for your guitar practice</h2>
       <p class="lead">
         PracticeTab is a focus-first practice tool for guitar. It’s designed to remove distractions and keep you locked in on what matters: practicing.
@@ -226,13 +228,19 @@ title: Marcel Gast
   <div class="section-inner">
     <article class="tempodeck-showcase">
       <div class="tempodeck-lines" aria-hidden="true"></div>
-      <img class="tempodeck-logo" src="/assets/images/current-projects/tempodeck-logo.png" alt="TempoDeck logo">
+      <a class="tempodeck-logo-link" href="https://gettempodeck.com" target="_blank" rel="noopener noreferrer" aria-label="Open TempoDeck website">
+        <img class="tempodeck-logo" src="/assets/images/current-projects/tempodeck-logo.png" alt="TempoDeck logo">
+      </a>
       <h2 class="section-title">Stage-ready tempo control for bands and players</h2>
       <p class="lead">
         TempoDeck is a performance-first metronome app for iOS, Android, and macOS. Build song and setlist tempo maps,
         trigger custom audio and voice cues, and chain transitions to keep live shows tight. At home, load MP3s and
         practice with click and cues while playing along.
       </p>
+      <a class="button-link button-link--primary tempodeck-cta" href="https://gettempodeck.com" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"></path><path d="M8 21V3"></path><path d="m8 9 13 6"></path></svg>
+        <span class="link-label">Visit TempoDeck</span>
+      </a>
       <div class="practice-points tempodeck-points">
         <article class="practice-point">
           <h3>Built for live bands</h3>

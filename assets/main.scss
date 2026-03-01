@@ -2032,6 +2032,18 @@ body::before {
   filter: drop-shadow(0 0 14px rgba(91, 213, 161, 0.55));
 }
 
+.practice-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.practice-logo-link:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 14px rgba(91, 213, 161, 0.36));
+}
+
 .practice-showcase .section-title {
   margin: 0.9rem auto 0.9rem;
   max-width: 18ch;
@@ -2145,6 +2157,33 @@ body::before {
   display: block;
   margin: 0.55rem auto 0.35rem;
   filter: drop-shadow(0 14px 28px rgba(161, 96, 255, 0.48));
+}
+
+.tempodeck-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.tempodeck-logo-link:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 14px rgba(198, 131, 255, 0.32));
+}
+
+.tempodeck-showcase .tempodeck-cta {
+  margin-top: 1.25rem;
+  background: linear-gradient(145deg, #a367ff, #7a58ff);
+  border: 1px solid rgba(205, 171, 255, 0.9);
+  color: #f8f4ff;
+  box-shadow: 0 0 0 1px rgba(198, 131, 255, 0.18), 0 0 24px rgba(145, 96, 255, 0.38);
+}
+
+.tempodeck-showcase .tempodeck-cta:hover {
+  background: linear-gradient(145deg, #b27aff, #8f6aff);
+  border-color: rgba(224, 201, 255, 0.98);
+  color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(205, 171, 255, 0.28), 0 0 30px rgba(145, 96, 255, 0.55);
 }
 
 .tempodeck-showcase .section-title {
